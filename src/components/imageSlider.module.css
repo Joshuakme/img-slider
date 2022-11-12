@@ -1,0 +1,43 @@
+:root {
+  --img-translate-height: 0;
+}
+
+.imgSliderContainer {
+  /* position: relative; */
+  /* inset: 0; */
+  /* top: 50%; */
+  /* left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  aspect-ratio: 3 / 2;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imgContainer {
+  transform: translateY(var(--img-translate-height));
+  transition: transform 500ms ease-in-out;
+}
+
+.sliderImg {
+  width: 100%;
+  height: auto;
+}
+
+.sliderBtn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
