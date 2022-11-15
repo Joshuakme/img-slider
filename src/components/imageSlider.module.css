@@ -1,9 +1,9 @@
 :root {
-  --img-translate-height: 0;
+  --img-translate-height: calc(-100 / 5) %;
 }
 
 .imgSliderContainer {
-  /* position: relative; */
+  position: relative;
   /* inset: 0; */
   /* top: 50%; */
   /* left: 50%; */
@@ -18,8 +18,8 @@
 }
 
 .imgContainer {
-  transform: translateY(var(--img-translate-height));
-  transition: transform 500ms ease-in-out;
+  transform: translateY(-20%);
+  transition: transform 400ms ease-in-out;
 }
 
 .sliderImg {
@@ -31,7 +31,45 @@
   position: absolute;
   left: 0;
   right: 0;
+  margin: auto;
   z-index: 10;
+}
+
+.sliderRadioContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  color: white;
+  z-index: 10;
+}
+
+.sliderRadioContainer input[type="radio"] {
+  margin: 0 0.5rem;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+}
+
+.sliderRadioContainer input[type="radio"]:hover {
+  scale: 1.1;
+  transform: translateY(8%);
+}
+
+.sliderRadioContainer input[type="radio"]:hover::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateY(-20%);
+  /* background-color: red; */
+  z-index: 0;
+}
+
+.sliderRadioContainer input[type="radio"]:checked {
+  background-color: purple;
+  color: red;
+  scale: 1.3;
 }
 
 .notransition {
